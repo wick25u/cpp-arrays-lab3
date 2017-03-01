@@ -5,12 +5,12 @@
 	[  ] Write a program that performs the following:
 		[ x ] Prompt the user to input five numbers.
 		[ x ] Store the input into either an array or a vector.
-		[  ] Once the user is finished entering numbers:
-			[  ] Display the five numbers in reverse order.
-			[  ] Display the highest number entered.
-			[  ] Display the lowest number entered.
-		[  ] Extra Credit: Allow the user to enter as many numbers as they want(at least 5).
-	[  ] Compress(zip) your program and submit it to Blackboard.
+		[ x ] Once the user is finished entering numbers:
+			[ x ] Display the five numbers in reverse order.
+			[ x ] Display the highest number entered.
+			[ x ] Display the lowest number entered.
+		[ x ] Extra Credit: Allow the user to enter as many numbers as they want(at least 5).
+	[ x ] Compress(zip) your program and submit it to Blackboard.
 */
 
 
@@ -20,8 +20,6 @@
 #include <conio.h>
 #include <vector>
 #include <algorithm>
-
-using namespace std;
 
 int main()
 {
@@ -41,11 +39,13 @@ int main()
 	}
 
 	std::vector<int>::reverse_iterator rit;
-	for ()
+	for (rit = vec.rbegin(); rit != vec.rend(); rit++)
 	{
-		std::cout <<
+		std::cout << *rit << ", ";
 	}
-
+	
+	std::cout << std::endl << "The highest number entered is: " << *std::max_element(vec.begin(), vec.end());	
+	std::cout << std::endl << "The lowest number entered is: " << *std::min_element(vec.begin(), vec.end());
 
 	_getch();
 	return 0;
